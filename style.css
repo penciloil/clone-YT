@@ -1,0 +1,78 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+}
+img {
+    width: 26px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-menu {
+    margin: 0 16px;
+}
+
+.yt-logo {
+    width: 80px;
+    margin-left: 16px;
+}
+
+.menu-icons {
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    align-items: center;
+    gap: 1.5rem;
+}   
+
+.channel {
+    width: 36px;
+    border-radius: 50%;
+}
+
+.search-bar {
+    display: flex;
+    margin: 0 4rem; 
+    flex-grow: 1;  
+}
+
+.search-input {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.6em;
+    border: 1px solid #c6c6c6;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    padding: 0 1.25rem;
+    border: 1px solid #c6c6c6;
+    border-left: none;
+    border-radius: 0;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+
+.search-btn:hover {
+    background: #f0f0f0;
+}
+
+.voice {
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+}
