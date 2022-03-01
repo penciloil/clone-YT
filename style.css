@@ -79,7 +79,7 @@ img {
 
 .mainbody {
     display: flex;
-    height: calc(100vh - 72px);
+    height: calc(100% - 72px);
 }
 
 .sidebar {
@@ -158,10 +158,61 @@ img {
 }
 
 .video-channel-name:hover {
-    color: red;
+    color: black;
 }
 
 .video-channel-name, .video-metadata {
     color: #555;
     font-size: 0.9rem;
+}
+
+.thumbnail {
+    position: relative;
+    display: flex;
+}
+
+.thumbnail::before {
+    content: attr(data-duration);
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+    background: black;
+    color: white;
+    border-radius: 0.3rem;
+    padding:0.1rem 0.3rem;
+    font-size: 0.9rem;
+}
+
+.video {
+    width: 100%;
+    background: #f9f9f9;
+}
+
+.video-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+    gap: 3rem 1rem;
+    margin: 0 1.5rem;
+    padding: 3rem 0;
+    border-top: 0.25rem solid #ddd;
+}
+
+.video-section:first-child {
+    border: none;
+}
+
+.video-section-title {
+    display: flex;
+    grid-column: 1/-1;
+    justify-content: space-between;
+    align-items: center;
+    margin: -0.5rem 0;
+}
+
+.video-section-title-delete {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #555;
 }
